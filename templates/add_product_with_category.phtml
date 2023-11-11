@@ -1,0 +1,7 @@
+<label for="category">Categoría:</label>
+    <select name="category" id="category">
+         <?php $categories = $this->modelCategories->getAllCategories(); ?>
+            <?php foreach ($categories as $category) : ?>
+              <?php  echo "<option value='" . $category->id . "'>" . $category->season . "</option>"; ?>
+            <?php endforeach ?>
+        </select>

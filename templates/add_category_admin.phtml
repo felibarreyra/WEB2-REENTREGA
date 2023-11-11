@@ -1,0 +1,12 @@
+<?php require_once('./templates/header.phtml'); ?>
+        <form action="agregarCategoria" method="POST">
+            <h2>Agregar Categoria:</h2>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nombre</label>
+                <input type="text" name="name" class="form-control" aria-describedby="emailHelp">
+                <label for="exampleInputEmail1">Temporada</label>
+                <input type="text" name="season" class="form-control" aria-describedby="emailHelp">
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar Categoria</button>
+        </form>
+<?php require_once('./templates/footer.phtml'); ?>

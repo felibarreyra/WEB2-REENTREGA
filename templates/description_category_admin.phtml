@@ -1,0 +1,18 @@
+<?php require_once('./templates/header.phtml');?>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Categoria: <?php echo $category->name ?></h5>
+                <h5 class="card-title">Temporada: <?php echo $category->season ?></h5>
+            </div>
+        </div>
+        <form action="actualizarCategoriaTotal" method="post">
+        <input type="hidden" name="id" value="<?php echo $category->id; ?>">
+                <label>Nombre de la categoria</label>
+                <input type="text" name="name" class="form-control">
+                <label>Temporada del producto</label>
+                <input type="text" name="season" class="form-control">
+       
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+        </form>
+
+    <?php require_once('./templates/footer.phtml'); ?>

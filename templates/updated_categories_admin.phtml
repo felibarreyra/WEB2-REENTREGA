@@ -1,0 +1,14 @@
+<?php require_once('./templates/header.phtml'); ?>
+
+<?php foreach($categories as $category) : ?>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title"><?php echo $category->name ?></h5>
+            <?php if (isset($_SESSION['user']) && ($_SESSION['logged'] == true) && ($_SESSION['rol'] == 'admin')) : ?>
+                <a href="actualizarCategoria/<?php echo $category->id ?>" class="btn btn-success">Actualizar categoria</a>
+            <?php endif ?>
+        </div>
+    </div>
+<?php endforeach ?>
+
+<?php require_once('./templates/footer.phtml'); ?>

@@ -1,0 +1,10 @@
+<?php require_once('./templates/header.phtml');?>
+        <div class="card" style="width: 18rem;">
+            <img src="<?php echo $product->img ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Producto: <?php echo $product->name ?></h5>
+                <h5 class="card-title">Descripción: <?php echo $product->description ?></h5>
+                <h5 class="card-title">Precio: $ <?php echo $product->price ?></h5>
+            </div>
+        </div>
+    <?php require_once('./templates/footer.phtml'); ?>

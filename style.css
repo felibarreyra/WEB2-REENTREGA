@@ -1,0 +1,36 @@
+#footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background:#999;
+ }
+
+ .div_title {
+
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+
+ }
+
+ main.container.mt-3 {
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 5%;
+
+ }
+
+ .buttons {
+
+   display: flex;
+   justify-content: space-around;
+   justify-content: center;
+
+
+ }
