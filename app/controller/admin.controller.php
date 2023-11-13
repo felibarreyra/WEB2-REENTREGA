@@ -121,17 +121,6 @@ class AdminController
             $this->view->showError('No hay categorias disponibles');
         }
     }
-    public function showListCatUpdate()
-    {
-
-        $categories = $this->model->getAll();
-        if (!empty($categories)) {
-            require_once './templates/updated_categories_admin.phtml';
-        }
-        else{
-            $this->view->showError('No hay categorias disponibles');
-        }
-    }
     public function showDescriptionCatUpdated($id){
         $category = $this->modelCategories->getCategoryById($id);
         if(!empty($category)){
