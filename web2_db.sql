@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 09-10-2023 a las 20:01:35
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 13-11-2023 a las 18:14:42
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `db_ecommerce`
+-- Base de datos: `web2_db`
 --
 
 -- --------------------------------------------------------
@@ -38,8 +38,9 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `name`, `season`) VALUES
-(1, 'Buzos', 'Invierno'),
-(2, 'Remeras', 'Verano');
+(10, 'Buzos', 'Invierno'),
+(11, 'Remera', 'Verano'),
+(13, 'Bufanda', 'invierno');
 
 -- --------------------------------------------------------
 
@@ -65,7 +66,8 @@ INSERT INTO `client` (`id`, `username`, `password`, `rol`) VALUES
 (5, 'lucas', '$2y$10$CkZALjtNhCigEs0hQhZUx.SPmCrgBfK4JQkdxuZ.RjeVCCG764m0y', 'user'),
 (6, 'juan', '$2y$10$gr752ZvuHn.GqmcVL2actOwi0Eadi69MclfMn8Yjh3sJCRbnNZceC', 'user'),
 (7, 'pepe', '$2y$10$2irYy8pPw7TqPrHB.haaG.KvtK1Mxwp2DZ0uyyVejh01WocxrrIna', 'user'),
-(8, 'dario', '$2y$10$3u55z21.eI1wuK/zErbyKOhw33Ytyg1oUc/Kes2B9cltNKp8t5jkO', 'user');
+(8, 'dario', '$2y$10$3u55z21.eI1wuK/zErbyKOhw33Ytyg1oUc/Kes2B9cltNKp8t5jkO', 'user'),
+(9, 'webadmin', '$2y$10$2bUR0QF/SUScHthjeL8VDe9Va9.W5ZF4xZB5mxBEbWTuRFD.YjDFO', 'user');
 
 -- --------------------------------------------------------
 
@@ -81,13 +83,6 @@ CREATE TABLE `products` (
   `price` int(200) NOT NULL,
   `fk_id_category` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `products`
---
-
-INSERT INTO `products` (`id`, `img`, `name`, `description`, `price`, `fk_id_category`) VALUES
-(1, 'https://http2.mlstatic.com/D_NQ_NP_781887-MLA69230254891_052023-O.webp', 'Buzo Adidas', 'Buzo Adidas con capucha', 15000, 1);
 
 --
 -- Índices para tablas volcadas
@@ -120,13 +115,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT de la tabla `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `client`
 --
 ALTER TABLE `client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
